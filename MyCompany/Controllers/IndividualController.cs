@@ -11,7 +11,7 @@ namespace MyCompany.Controllers
 {
     public class IndividualController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly AppDbContext _context;
         public IActionResult Index()
         {
             return View();

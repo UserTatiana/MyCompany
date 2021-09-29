@@ -14,6 +14,11 @@ namespace MyCompany.Domain
         public AppDbContext(DbContextOptions<AppDbContext> options) : base (options) { }
         public DbSet <TextField> TextFields { get; set; }
         public DbSet<ServiceItem> ServiceItems { get; set; }
+        public DbSet<Person> Persons { get; set; }
+        public DbSet<LegalEntities> LegalEntitieses { get; set; }
+        public DbSet<Individual> Individuals { get; set; }
+        public DbSet<RelationshipType> RelationshipTypes { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
