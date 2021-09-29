@@ -10,6 +10,5 @@ namespace MyCompany.Domain.Entities
         public string CodeWord { get; set; }
         public override string Title { get; set; } = "Information page";
         public override string Text { get; set; } = "Information fill in by administrator";
-        public Guid Id { get; internal set; }
     }
 }

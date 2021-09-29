@@ -20,9 +20,9 @@ namespace MyCompany.Domain.Repositories.EntityFramework
         {
             return context.TextFields;
         }
-        public TextField GetTextFieldById(Guid id)
+        public TextField GetTextFieldById(Guid ID)
         {
-            return context.TextFields.FirstOrDefault(x => x.Id == id);
+            return context.TextFields.FirstOrDefault(x => x.ID == ID);
         }
         public TextField GetTextFieldByCodeWord(string codeWord)
         {
@@ -30,7 +30,7 @@ namespace MyCompany.Domain.Repositories.EntityFramework
         }
         public void SaveTextField(TextField entity)
         {
-            if (entity.Id == default)
+            if (entity.ID == default)
                 context.Entry(entity).State = EntityState.Added;
             else
                 context.Entry(entity).State = EntityState.Modified;
@@ -38,7 +38,7 @@ namespace MyCompany.Domain.Repositories.EntityFramework
         }
         public void DeleteTextField(Guid id)
         {
-            context.TextFields.Remove(new TextField() { Id = id });
+            context.TextFields.Remove(new TextField() { ID = id });
             context.SaveChanges();
         }
     }
