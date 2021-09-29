@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MyCompany.Controllers
 {
+    // Home controller
     public class HomeController : Controller
     {
         public IActionResult Index()
